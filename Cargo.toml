@@ -8,4 +8,4 @@ edition = "2018"
 
 [dependencies]
 plotters = "0.2.12"
-hex-field = { git = "https://github.com/F3kilo/hex-field.git" }
+hex-field = { git = "https://github.com/F3kilo/hex-field.git", branch = "hot_fixes" }
