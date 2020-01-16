@@ -74,7 +74,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let center = Vec2::new(ax / 2f32, ax / 2f32);
     let conf = Config {
-        hex_size: Vec2::new(20f32, 16f32),
+        hex_size: Vec2::new(320f32, 160f32),
         offset: center,
     };
     let hf = HexField::new(conf);
@@ -83,8 +83,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         hf.hex_size(),
     );
 
-    let mut tree = algo::rand_tree::RandHexTree::new(hex, 0.4f64, StdRng::seed_from_u64(4));
-    tree.add_hexes(540);
+    let mut tree = algo::rand_tree::RandHexTree::new(hex, 0.5f64, StdRng::seed_from_u64(0));
+    tree.add_hexes(5);
     println!("Calculated!!!");
     draw_node(&mut chart, &tree.tree(), &tree.tree().root().unwrap())?;
 
